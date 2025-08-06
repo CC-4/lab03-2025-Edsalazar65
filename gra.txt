@@ -1,0 +1,26 @@
+S ::= E;
+E ::= E + E
+  |   E - E
+  |   E * E
+  |   E / E
+  |   E % E
+  |   E ^ E
+  |   - E
+  |   (E)
+  |   number
+
+# number en nuestro caso significara un double
+
+
+
+S -> E
+E -> ~ EN
+E -> (E)N
+E -> numberN
+N ->  + EN
+N ->  - EN
+N ->  * EN
+N ->  / EN
+N ->  % EN
+N ->  ^ EN
+N ->  lambda
