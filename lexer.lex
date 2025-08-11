@@ -111,6 +111,8 @@ exponente = [eE]
 
 <YYINITIAL>")"      {return new Token(Token.RPAREN);}
 
+<YYINITIAL>"*"      {return new Token(Token.MULT);}
+
 <YYINITIAL>{digitos}+{punto}?{digitos}*({exponente}{signo}?{digitos}+)?       {return new Token(Token.NUMBER, yytext());}
 
 <YYINITIAL>"error"      {return new Token(Token.ERROR);}

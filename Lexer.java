@@ -262,25 +262,26 @@ public class Lexer {
 		/* 12 */ YY_NO_ANCHOR,
 		/* 13 */ YY_NO_ANCHOR,
 		/* 14 */ YY_NO_ANCHOR,
-		/* 15 */ YY_NOT_ACCEPT,
-		/* 16 */ YY_NO_ANCHOR,
+		/* 15 */ YY_NO_ANCHOR,
+		/* 16 */ YY_NOT_ACCEPT,
 		/* 17 */ YY_NO_ANCHOR,
-		/* 18 */ YY_NOT_ACCEPT,
-		/* 19 */ YY_NO_ANCHOR,
-		/* 20 */ YY_NOT_ACCEPT,
+		/* 18 */ YY_NO_ANCHOR,
+		/* 19 */ YY_NOT_ACCEPT,
+		/* 20 */ YY_NO_ANCHOR,
 		/* 21 */ YY_NOT_ACCEPT,
-		/* 22 */ YY_NOT_ACCEPT
+		/* 22 */ YY_NOT_ACCEPT,
+		/* 23 */ YY_NOT_ACCEPT
 	};
 	private int yy_cmap[] = unpackFromString(1,130,
-"17:9,2:2,17:2,0,17:18,2,17:4,6,17:2,8,9,17,3,17,4,11,5,10:10,17,1,17:9,12,1" +
-"7:24,7,17:6,13,17:9,15,17:2,14,17:11,16,17,18:2")[0];
+"18:9,2:2,18:2,0,18:18,2,18:4,6,18:2,8,9,10,3,18,4,12,5,11:10,18,1,18:9,13,1" +
+"8:24,7,18:6,14,18:9,16,18:2,15,18:11,17,18,19:2")[0];
 
-	private int yy_rmap[] = unpackFromString(1,23,
-"0,1:9,2,1:4,3,4,5,6,7:2,8,9")[0];
+	private int yy_rmap[] = unpackFromString(1,24,
+"0,1:10,2,1:4,3,4,5,6,7:2,8,9")[0];
 
-	private int yy_nxt[][] = unpackFromString(10,19,
-"-1,1,2,3,4,5,6,7,8,9,10,11:2,17,11:2,12,11,13,-1:29,10,16,15:2,-1:8,20:2,-1" +
-":5,19,-1:18,16,-1,15:2,-1:19,18,-1:18,21,-1:14,19,-1:23,22,-1:17,14,-1:4");
+	private int yy_nxt[][] = unpackFromString(10,20,
+"-1,1,2,3,4,5,6,7,8,9,10,11,12:2,18,12:2,13,12,14,-1:31,11,17,16:2,-1:8,21:2" +
+",-1:6,20,-1:19,17,-1,16:2,-1:20,19,-1:19,22,-1:15,20,-1:24,23,-1:18,15,-1:4");
 
 	public Token nextToken ()
 		throws java.io.IOException {
@@ -363,38 +364,42 @@ public class Lexer {
 					case -10:
 						break;
 					case 10:
-						{return new Token(Token.NUMBER, yytext());}
+						{return new Token(Token.MULT);}
 					case -11:
 						break;
 					case 11:
-						{ return new Token(Token.ERROR);
-                      /* todo lo demas es ERROR */ }
+						{return new Token(Token.NUMBER, yytext());}
 					case -12:
 						break;
 					case 12:
-						{return new Token(Token.UNARY);}
+						{ return new Token(Token.ERROR);
+                      /* todo lo demas es ERROR */ }
 					case -13:
 						break;
 					case 13:
-						
+						{return new Token(Token.UNARY);}
 					case -14:
 						break;
 					case 14:
-						{return new Token(Token.ERROR);}
+						
 					case -15:
 						break;
-					case 16:
-						{return new Token(Token.NUMBER, yytext());}
+					case 15:
+						{return new Token(Token.ERROR);}
 					case -16:
 						break;
 					case 17:
-						{ return new Token(Token.ERROR);
-                      /* todo lo demas es ERROR */ }
+						{return new Token(Token.NUMBER, yytext());}
 					case -17:
 						break;
-					case 19:
-						{return new Token(Token.NUMBER, yytext());}
+					case 18:
+						{ return new Token(Token.ERROR);
+                      /* todo lo demas es ERROR */ }
 					case -18:
+						break;
+					case 20:
+						{return new Token(Token.NUMBER, yytext());}
+					case -19:
 						break;
 					default:
 						yy_error(YY_E_INTERNAL,false);

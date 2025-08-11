@@ -13,7 +13,7 @@ E ::= E + E
 
 
 
-S -> E
+S -> E;
 E -> ~ EN
 E -> (E)N
 E -> numberN
